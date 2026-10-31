@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>ارتباط با کارشناسان رشته های تحصیلی</title>
   
-  <!-- پیش‌بارگذاری آنی تصاویر اسلایدها -->
   <link rel="preload" as="image" href="../images/karh1.webp">
   <link rel="preload" as="image" href="../images/karh2.webp">
 
@@ -208,7 +207,7 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     }
 
-    /* بنر اسلایدر دو تایی با فریم نئونی فیروزه‌ای */
+    /* بنر اسلایدر بدون انیمیشن زوم */
     .page-hero-banner-slider {
       width: 100%;
       aspect-ratio: 8 / 3;
@@ -227,13 +226,11 @@
       background-position: center;
       background-repeat: no-repeat;
       opacity: 0;
-      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-      transform: scale(1.02);
+      transition: opacity 0.55s ease-in-out;
     }
 
     .slide-item.active {
       opacity: 1;
-      transform: scale(1);
     }
 
     .ivr-instruction-box {
@@ -462,7 +459,7 @@
       </a>
     </div>
 
-    <!-- اسلایدر دو تایی هدر (karh1 و karh2) -->
+    <!-- اسلایدر دو تایی هدر بدون زوم -->
     <div class="page-hero-banner-slider" id="bannerSlider">
       <div class="slide-item active" style="background-image: url('../images/karh1.webp');"></div>
       <div class="slide-item" style="background-image: url('../images/karh2.webp');"></div>
@@ -555,7 +552,6 @@
   </footer>
 
   <script>
-    // کنترل اسلایدر خودکار هر ۱ ثانیه
     const slides = document.querySelectorAll('#bannerSlider .slide-item');
     let currentSlide = 0;
     setInterval(() => {
