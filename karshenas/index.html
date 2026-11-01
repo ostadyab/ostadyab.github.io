@@ -168,37 +168,38 @@
       margin-bottom: 16px;
     }
 
+    /* دکمه بازگشت فیروزه‌ای متناسب با باکس‌های ارتباط، سالید و با فونت و آیکون سفید */
     .back-home-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1.3px solid #00f0ff;
-      color: #ffffff;
-      padding: 7px 15px;
+      background: #0099b8;
+      border: none;
+      color: #ffffff !important;
+      padding: 7px 16px;
       border-radius: 12px;
       text-decoration: none;
       font-size: 12.5px;
       font-weight: 800;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 240, 255, 0.35);
+      box-shadow: 0 4px 14px rgba(0, 153, 184, 0.45);
       transition: all 0.22s cubic-bezier(0.25, 0.8, 0.25, 1);
       cursor: pointer;
     }
 
+    .back-home-btn i, .back-home-btn span {
+      color: #ffffff !important;
+    }
+
     .back-home-btn i {
       font-size: 13.5px;
-      color: #ffd166;
       transition: transform 0.25s ease;
     }
 
     .back-home-btn:hover {
-      background: rgba(0, 240, 255, 0.22);
-      border-color: #55f5ff;
+      background: #00b4d8;
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 240, 255, 0.55);
+      box-shadow: 0 6px 20px rgba(0, 153, 184, 0.65);
     }
 
     .back-home-btn:hover i { transform: scale(1.15); }
@@ -207,7 +208,6 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     }
 
-    /* بنر اسلایدر بدون انیمیشن زوم */
     .page-hero-banner-slider {
       width: 100%;
       aspect-ratio: 8 / 3;
@@ -244,6 +244,12 @@
       flex-direction: column;
       align-items: center;
       gap: 12px;
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .ivr-instruction-box.glow-green {
+      border-color: #06d6a0 !important;
+      box-shadow: 0 0 24px rgba(6, 214, 160, 0.7) !important;
     }
 
     .ivr-text {
@@ -570,6 +576,7 @@
         const icon = btnElement.querySelector('i');
         const originalText = span.innerText;
 
+        if (parentBox) parentBox.classList.add('glow-green');
         if (pillElement) pillElement.classList.add('glow-pill-green');
         if (digitsElement) digitsElement.classList.add('copied-glow');
 
@@ -578,6 +585,7 @@
         icon.className = 'fa-solid fa-check';
 
         setTimeout(() => {
+          if (parentBox) parentBox.classList.remove('glow-green');
           if (pillElement) pillElement.classList.remove('glow-pill-green');
           if (digitsElement) digitsElement.classList.remove('copied-glow');
 
