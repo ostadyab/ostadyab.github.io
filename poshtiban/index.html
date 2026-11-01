@@ -168,37 +168,38 @@
       margin-bottom: 16px;
     }
 
+    /* دکمه بازگشت سبز زمردی متناسب با تم پشتیبانان، کاملاً سالید با متن و آیکون سفید */
     .back-home-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1.3px solid #06d6a0;
-      color: #ffffff;
-      padding: 7px 15px;
+      background: #059669;
+      border: none;
+      color: #ffffff !important;
+      padding: 7px 16px;
       border-radius: 12px;
       text-decoration: none;
       font-size: 12.5px;
       font-weight: 800;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3), 0 0 10px rgba(6, 214, 160, 0.35);
+      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.45);
       transition: all 0.22s cubic-bezier(0.25, 0.8, 0.25, 1);
       cursor: pointer;
     }
 
+    .back-home-btn i, .back-home-btn span {
+      color: #ffffff !important;
+    }
+
     .back-home-btn i {
       font-size: 13.5px;
-      color: #ffd166;
       transition: transform 0.25s ease;
     }
 
     .back-home-btn:hover {
-      background: rgba(6, 214, 160, 0.22);
-      border-color: #34d399;
+      background: #10b981;
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(6, 214, 160, 0.55);
+      box-shadow: 0 6px 20px rgba(5, 150, 105, 0.65);
     }
 
     .back-home-btn:hover i { transform: scale(1.15); }
@@ -207,7 +208,6 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     }
 
-    /* بنر اسلایدر بدون انیمیشن زوم و فقط فید نرم */
     .page-hero-banner-slider {
       width: 100%;
       aspect-ratio: 8 / 3;
@@ -343,6 +343,12 @@
       align-items: center;
       gap: 10px;
       width: 100%;
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .support-person-row.glow-green {
+      border-color: #06d6a0 !important;
+      box-shadow: 0 0 24px rgba(6, 214, 160, 0.7) !important;
     }
 
     .support-person-name {
@@ -427,7 +433,7 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      max-width: 320px;
+      max-width: 340px;
     }
 
     .action-btn {
@@ -569,7 +575,7 @@
               <span class="contact-eitaa-id">@l_nikoo1356</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/l_nikoo1356" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/l_nikoo1356" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@l_nikoo1356', this)"><span>کپی</span></button>
             </div>
             <div class="contact-glass-pill">
@@ -590,7 +596,7 @@
               <span class="contact-eitaa-id">@Alijani_s</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/Alijani_s" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/Alijani_s" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@Alijani_s', this)"><span>کپی</span></button>
             </div>
             <div class="contact-glass-pill">
@@ -611,7 +617,7 @@
               <span class="contact-eitaa-id">@Aghayarimasal</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/Aghayarimasal" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/Aghayarimasal" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@Aghayarimasal', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -624,7 +630,7 @@
               <span class="contact-eitaa-id">@RDaliri49</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/RDaliri49" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/RDaliri49" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@RDaliri49', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -637,7 +643,7 @@
               <span class="contact-eitaa-id">@yazdipourQPNU</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/yazdipourQPNU" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/yazdipourQPNU" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@yazdipourQPNU', this)"><span>کپی</span></button>
             </div>
             <div class="contact-glass-pill">
@@ -666,7 +672,7 @@
               <span class="contact-eitaa-id">@Hajitaheriha</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/Hajitaheriha" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/Hajitaheriha" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@Hajitaheriha', this)"><span>کپی</span></button>
             </div>
             <div class="contact-glass-pill">
@@ -695,7 +701,7 @@
               <span class="contact-eitaa-id">@Hassanpoor55</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/Hassanpoor55" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/Hassanpoor55" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@Hassanpoor55', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -707,7 +713,7 @@
               <span class="contact-eitaa-id">@Msafavi48</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/Msafavi48" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/Msafavi48" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@Msafavi48', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -732,7 +738,7 @@
               <span class="contact-eitaa-id">@Aliborzoo</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/Aliborzoo" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/Aliborzoo" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@Aliborzoo', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -745,7 +751,7 @@
               <span class="contact-eitaa-id">@Ahmadi33000</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/Ahmadi33000" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/Ahmadi33000" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@Ahmadi33000', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -758,7 +764,7 @@
               <span class="contact-eitaa-id">@zxcvbnm1122</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/zxcvbnm1122" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/zxcvbnm1122" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@zxcvbnm1122', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -771,7 +777,7 @@
               <span class="contact-eitaa-id">@rahmani5172</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/rahmani5172" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/rahmani5172" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@rahmani5172', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -784,7 +790,7 @@
               <span class="contact-eitaa-id">@nejatipnu</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/nejatipnu" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/nejatipnu" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@nejatipnu', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -796,7 +802,7 @@
               <span class="contact-eitaa-id">@P_hasanzadeh</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/P_hasanzadeh" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/P_hasanzadeh" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@P_hasanzadeh', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -809,7 +815,7 @@
               <span class="contact-eitaa-id">@Qpnuazadadmin</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/Qpnuazadadmin" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/Qpnuazadadmin" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@Qpnuazadadmin', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -832,7 +838,7 @@
               <span class="contact-eitaa-id">@alvand_pnu</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/alvand_pnu" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/alvand_pnu" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@alvand_pnu', this)"><span>کپی</span></button>
             </div>
             <div class="contact-glass-pill">
@@ -861,7 +867,7 @@
               <span class="contact-eitaa-id">@jamshideshghi</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/jamshideshghi" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/jamshideshghi" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@jamshideshghi', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -884,7 +890,7 @@
               <span class="contact-eitaa-id">@akramBahmani</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/akramBahmani" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/akramBahmani" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@akramBahmani', this)"><span>کپی</span></button>
             </div>
             <div class="contact-glass-pill">
@@ -901,8 +907,8 @@
               <span class="contact-digits">۰۲۸۳۵۲۳۹۰۶۱</span>
             </div>
             <div class="card-actions">
-              <a href="tel:02833379061" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
-              <button class="action-btn btn-copy" onclick="handleCopyAction('02833379061', this)"><span>کپی</span></button>
+              <a href="tel:02835239061" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
+              <button class="action-btn btn-copy" onclick="handleCopyAction('02835239061', this)"><span>کپی</span></button>
             </div>
           </div>
 
@@ -913,7 +919,7 @@
               <span class="contact-eitaa-id">@rahmani_tak</span>
             </div>
             <div class="card-actions">
-              <a href="https://eitaa.com/rahmani_tak" target="_blank" class="action-btn btn-eitaa">ارسال در ایتا</a>
+              <a href="https://eitaa.com/rahmani_tak" target="_blank" class="action-btn btn-eitaa">ارسال پیام در ایتا</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('@rahmani_tak', this)"><span>کپی</span></button>
             </div>
             <div class="contact-glass-pill">
@@ -1075,6 +1081,7 @@
         const icon = btnElement.querySelector('i');
         const originalText = span ? span.innerText : 'کپی';
 
+        if (cardParent) cardParent.classList.add('glow-green');
         if (pillElement) pillElement.classList.add('glow-pill-green');
         if (nameElement) nameElement.classList.add('glow-text-green');
         if (digitsElement) digitsElement.classList.add('copied-glow');
@@ -1085,6 +1092,7 @@
         if (icon) icon.className = 'fa-solid fa-check';
 
         setTimeout(() => {
+          if (cardParent) cardParent.classList.remove('glow-green');
           if (pillElement) pillElement.classList.remove('glow-pill-green');
           if (nameElement) nameElement.classList.remove('glow-text-green');
           if (digitsElement) digitsElement.classList.remove('copied-glow');
