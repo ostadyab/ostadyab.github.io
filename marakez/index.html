@@ -168,37 +168,38 @@
       margin-bottom: 16px;
     }
 
+    /* دکمه بازگشت با رنگ مشابه دکمه مشاهده صفحه اصلی، غیرشیشه‌ای، با متن و آیکون سفید */
     .back-home-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1.3px solid #ff4d6d;
-      color: #ffffff;
-      padding: 7px 15px;
+      background: #e63956;
+      border: none;
+      color: #ffffff !important;
+      padding: 7px 16px;
       border-radius: 12px;
       text-decoration: none;
       font-size: 12.5px;
       font-weight: 800;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 77, 109, 0.35);
+      box-shadow: 0 4px 14px rgba(230, 57, 86, 0.45);
       transition: all 0.22s cubic-bezier(0.25, 0.8, 0.25, 1);
       cursor: pointer;
     }
 
+    .back-home-btn i, .back-home-btn span {
+      color: #ffffff !important;
+    }
+
     .back-home-btn i {
       font-size: 13.5px;
-      color: #ffd166;
       transition: transform 0.25s ease;
     }
 
     .back-home-btn:hover {
-      background: rgba(255, 77, 109, 0.22);
-      border-color: #ff2a51;
+      background: #f04362;
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(255, 42, 81, 0.55);
+      box-shadow: 0 6px 20px rgba(230, 57, 86, 0.65);
     }
 
     .back-home-btn:hover i { transform: scale(1.15); }
@@ -207,7 +208,6 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     }
 
-    /* بنر اسلایدر بدون انیمیشن زوم */
     .page-hero-banner-slider {
       width: 100%;
       aspect-ratio: 8 / 3;
@@ -254,6 +254,12 @@
       text-align: center;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
       width: 100%;
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .campus-box-card.glow-green, .qazvin-dept-row.glow-green {
+      border-color: #06d6a0 !important;
+      box-shadow: 0 0 24px rgba(6, 214, 160, 0.7) !important;
     }
 
     .campus-box-name {
@@ -337,6 +343,7 @@
       align-items: center;
       gap: 8px;
       width: 100%;
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
     }
 
     .qazvin-dept-title {
@@ -721,6 +728,7 @@
         const icon = btnElement.querySelector('i');
         const originalText = span.innerText;
 
+        if (cardParent) cardParent.classList.add('glow-green');
         if (pillElement) pillElement.classList.add('glow-pill-green');
         if (titleElement) titleElement.classList.add('glow-text-green');
         if (digitsElement) digitsElement.classList.add('copied-glow');
@@ -730,6 +738,7 @@
         icon.className = 'fa-solid fa-check';
 
         setTimeout(() => {
+          if (cardParent) cardParent.classList.remove('glow-green');
           if (pillElement) pillElement.classList.remove('glow-pill-green');
           if (titleElement) titleElement.classList.remove('glow-text-green');
           if (digitsElement) digitsElement.classList.remove('copied-glow');
