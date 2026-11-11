@@ -645,11 +645,11 @@
       background: rgba(6, 214, 160, 0.08) !important;
     }
 
+    /* حذف ترنزیشن تاخیردار برای همگام‌سازی لحظه‌ای سبز شدن آیکون‌ها */
     .contact-glass-pill i {
       font-size: 19px;
       color: #e0aaff;
       flex-shrink: 0;
-      transition: color 0.3s ease;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -657,6 +657,7 @@
 
     .contact-glass-pill.glow-pill-green i {
       color: #06d6a0 !important;
+      transition: none !important;
     }
 
     .pill-eitaa-icon {
@@ -666,7 +667,6 @@
       display: inline-block;
       vertical-align: middle;
       flex-shrink: 0;
-      transition: transform 0.2s ease;
     }
 
     .contact-digits {
@@ -678,12 +678,12 @@
       text-shadow: 0 0 6px rgba(0, 240, 255, 0.35);
       display: flex;
       align-items: center;
-      transition: color 0.3s ease, text-shadow 0.3s ease;
     }
 
     .contact-digits.copied-glow {
       color: #06d6a0 !important;
       text-shadow: 0 0 10px rgba(6, 214, 160, 0.8) !important;
+      transition: none !important;
     }
 
     .contact-eitaa-id {
@@ -700,7 +700,6 @@
       display: inline-block;
       vertical-align: middle;
       line-height: 1.2;
-      transition: color 0.3s ease, text-shadow 0.3s ease;
     }
 
     .contact-eitaa-id.group-label-text {
@@ -714,6 +713,7 @@
     .contact-eitaa-id.copied-glow {
       color: #06d6a0 !important;
       text-shadow: 0 0 12px rgba(6, 214, 160, 0.85) !important;
+      transition: none !important;
     }
 
     .card-actions {
@@ -855,6 +855,12 @@
       padding: 12px 8px;
       border-radius: 16px;
       border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .phone-sub-item.glow-green {
+      border-color: #06d6a0 !important;
+      box-shadow: 0 0 24px rgba(6, 214, 160, 0.7) !important;
     }
 
     .no-results-box {
@@ -1219,7 +1225,10 @@
       "مرضیه ذوالفقاری نژاد: 09127863551",
       "علی طاهری: 09127889233",
       "عباس باقری: 09123239530",
-      "محمد افتخاری: 09356053391"
+      "محمد افتخاری: 09356053391",
+      "محسن یزدی پور: https://eitaa.com/joinchat/2578515650C9cdef73b15",
+      "عادله سادات حسینی نسب: https://eitaa.com/joinchat/143198010C1f8d10b7a4",
+      "ابراهیم سپهری: 09163442014"
     ];
 
     const instructorGroupProfiles = {
@@ -1230,7 +1239,9 @@
       "آقای ملکی نیا": "Dr. Malekinia",
       "عبدالله میرزایی": "abdollah mirzaei",
       "سید مهدی حسینی": "سید مهدی حسینی",
-      "مریم جلالی": "M.jamali"
+      "مریم جلالی": "M.jamali",
+      "محسن یزدی پور": "محسن یزدی پور",
+      "عادله سادات حسینی نسب": "مدرس دانشگاه پیام نور"
     };
 
     function toPersianDigits(num) {
@@ -1589,7 +1600,7 @@
           clearTimeout(btnElement._timer);
         }
 
-        const searchCard = btnElement.closest('.result-card');
+        const searchCard = btnElement.closest('.result-card, .phone-sub-item');
         if (searchCard) {
           searchCard.classList.add('glow-green');
         }
