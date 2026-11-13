@@ -18,7 +18,7 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            background: linear-gradient(-45deg, #0d021f, #1f0640, #340b6b, #14032b);
+            background: linear-gradient(-45deg, #090114, #1c053a, #320966, #110224);
             background-size: 400% 400%;
             animation: gradientBG 12s ease infinite;
         }
@@ -35,52 +35,162 @@
             }
         }
 
-        .center-image {
+        .glitch-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch-wrapper img {
             max-width: 220px;
             max-height: 220px;
             width: auto;
             height: auto;
             display: block;
-            animation: glitch 3.5s infinite;
         }
 
-        @keyframes glitch {
-            0%, 84%, 100% {
-                transform: translate(0, 0) skew(0deg);
+        .glitch-base {
+            position: relative;
+            z-index: 1;
+            animation: glitch-main 3.2s infinite;
+        }
+
+        .glitch-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        .glitch-cyan {
+            z-index: 2;
+            filter: drop-shadow(-4px 0 0 #00f3ff) brightness(1.3);
+            mix-blend-mode: screen;
+            animation: glitch-slice-1 3.2s infinite;
+        }
+
+        .glitch-magenta {
+            z-index: 3;
+            filter: drop-shadow(4px 0 0 #ff0055) brightness(1.3);
+            mix-blend-mode: screen;
+            animation: glitch-slice-2 3.2s infinite;
+        }
+
+        @keyframes glitch-main {
+            0%, 82%, 100% {
+                transform: translate(0, 0) skew(0deg) scale(1);
                 filter: none;
-                clip-path: inset(0 0 0 0);
+            }
+            83% {
+                transform: translate(-4px, 1px) skew(-3deg);
+                filter: contrast(1.4) brightness(1.2);
             }
             85% {
-                transform: translate(-5px, 2px) skew(-4deg);
-                filter: drop-shadow(3px 0 0 rgba(255, 0, 85, 0.85)) drop-shadow(-3px 0 0 rgba(0, 255, 255, 0.85));
-                clip-path: inset(15% 0 40% 0);
+                transform: translate(3px, -2px) skew(2deg) scale(1.03);
+                filter: hue-rotate(45deg) contrast(1.6);
             }
             87% {
-                transform: translate(5px, -2px) skew(4deg);
-                filter: drop-shadow(-3px 0 0 rgba(255, 0, 85, 0.85)) drop-shadow(3px 0 0 rgba(0, 255, 255, 0.85));
-                clip-path: inset(50% 0 15% 0);
-            }
-            89% {
-                transform: translate(-3px, -1px) skew(-2deg);
-                filter: hue-rotate(90deg) contrast(1.4);
-                clip-path: inset(0 0 0 0);
+                transform: translate(0, 0) skew(0deg);
+                filter: none;
             }
             91% {
-                transform: translate(4px, 1px) skew(3deg);
-                filter: drop-shadow(4px 0 0 rgba(0, 255, 255, 0.9)) drop-shadow(-4px 0 0 rgba(255, 0, 85, 0.9));
-                clip-path: inset(25% 0 30% 0);
+                transform: translate(-3px, 2px) skew(4deg);
+                filter: contrast(1.8) saturate(2);
             }
             93% {
-                transform: translate(-2px, 2px);
+                transform: translate(4px, -1px) skew(-2deg);
+                filter: invert(0.15) contrast(1.5);
+            }
+            95% {
+                transform: translate(0, 0) skew(0deg) scale(1);
                 filter: none;
+            }
+        }
+
+        @keyframes glitch-slice-1 {
+            0%, 82%, 88%, 90%, 96%, 100% {
+                opacity: 0;
+                transform: translate(0, 0);
                 clip-path: inset(0 0 0 0);
+            }
+            83% {
+                opacity: 0.9;
+                transform: translate(-10px, -2px) skew(-6deg);
+                clip-path: inset(12% 0 65% 0);
+            }
+            85% {
+                opacity: 0.95;
+                transform: translate(8px, 2px) skew(4deg);
+                clip-path: inset(45% 0 25% 0);
+            }
+            87% {
+                opacity: 0.85;
+                transform: translate(-6px, 0);
+                clip-path: inset(75% 0 5% 0);
+            }
+            91% {
+                opacity: 1;
+                transform: translate(12px, -3px) skew(-8deg);
+                clip-path: inset(20% 0 55% 0);
+            }
+            93% {
+                opacity: 0.9;
+                transform: translate(-9px, 1px);
+                clip-path: inset(60% 0 15% 0);
+            }
+            95% {
+                opacity: 0.8;
+                transform: translate(5px, 0);
+                clip-path: inset(5% 0 80% 0);
+            }
+        }
+
+        @keyframes glitch-slice-2 {
+            0%, 82%, 88%, 90%, 96%, 100% {
+                opacity: 0;
+                transform: translate(0, 0);
+                clip-path: inset(0 0 0 0);
+            }
+            83% {
+                opacity: 0.9;
+                transform: translate(10px, 2px) skew(6deg);
+                clip-path: inset(55% 0 15% 0);
+            }
+            85% {
+                opacity: 0.95;
+                transform: translate(-8px, -2px) skew(-4deg);
+                clip-path: inset(15% 0 60% 0);
+            }
+            87% {
+                opacity: 0.85;
+                transform: translate(7px, 1px);
+                clip-path: inset(35% 0 40% 0);
+            }
+            91% {
+                opacity: 1;
+                transform: translate(-12px, 3px) skew(8deg);
+                clip-path: inset(68% 0 10% 0);
+            }
+            93% {
+                opacity: 0.9;
+                transform: translate(9px, -1px);
+                clip-path: inset(10% 0 70% 0);
+            }
+            95% {
+                opacity: 0.8;
+                transform: translate(-6px, 0);
+                clip-path: inset(42% 0 38% 0);
             }
         }
     </style>
 </head>
 <body>
 
-    <img src="image/a.webp" alt="تصویر" class="center-image">
+    <div class="glitch-wrapper">
+        <img src="image/a.webp" alt="تصویر" class="glitch-base">
+        <img src="image/a.webp" alt="" class="glitch-layer glitch-cyan" aria-hidden="true">
+        <img src="image/a.webp" alt="" class="glitch-layer glitch-magenta" aria-hidden="true">
+    </div>
 
 </body>
 </html>
