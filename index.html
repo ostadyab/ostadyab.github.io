@@ -3,109 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>توقف فعالیت سایت</title>
+    <title>صفحه نمایش تصویر</title>
     <style>
-        /* تعریف فونت سفارشی از پوشه fonts */
-        @font-face {
-            font-family: 'CustomBoldFont';
-            src: url('fonts/m-Bold.ttf') format('truetype');
-            font-weight: bold;
-            font-style: normal;
-            font-display: swap;
-        }
-
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            background-color: #050505;
-            background-image: radial-gradient(circle at center, #1a0505 0%, #000000 100%);
-            min-height: 100vh;
+            height: 100vh;
+            width: 100vw;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'CustomBoldFont', Tahoma, sans-serif;
-            padding: 20px;
             overflow: hidden;
+            /* گرادینت بنفش تیره */
+            background: linear-gradient(-45deg, #0d021f, #1f0640, #340b6b, #14032b);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
         }
 
-        .neon-box {
-            max-width: 680px;
-            width: 100%;
-            padding: 50px 35px;
-            background-color: rgba(20, 4, 4, 0.75);
-            backdrop-filter: blur(8px);
-            /* فریم خط‌چین قرمز */
-            border: 3px dashed #ff1a1a;
-            border-radius: 20px;
-            text-align: center;
-            /* افکت درخشش نئونی قرمز */
-            box-shadow: 
-                0 0 15px rgba(255, 26, 26, 0.5),
-                0 0 35px rgba(255, 26, 26, 0.3),
-                inset 0 0 20px rgba(255, 26, 26, 0.25);
-            animation: pulseNeon 3s infinite alternate ease-in-out;
-        }
-
-        .icon-container {
-            margin-bottom: 25px;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .block-icon {
-            width: 85px;
-            height: 85px;
-            stroke: #ff2a2a;
-            filter: drop-shadow(0 0 12px rgba(255, 42, 42, 0.85));
-        }
-
-        .message-text {
-            color: #ffffff;
-            font-size: clamp(1.3rem, 3.5vw, 1.9rem);
-            line-height: 1.8;
-            letter-spacing: 0.2px;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-        }
-
-        /* انیمیشن نبض ملایم برای حالت نئونی */
-        @keyframes pulseNeon {
+        @keyframes gradientBG {
             0% {
-                box-shadow: 
-                    0 0 12px rgba(255, 26, 26, 0.45),
-                    0 0 30px rgba(255, 26, 26, 0.25),
-                    inset 0 0 15px rgba(255, 26, 26, 0.2);
-                border-color: #e61919;
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
             }
             100% {
-                box-shadow: 
-                    0 0 22px rgba(255, 26, 26, 0.75),
-                    0 0 50px rgba(255, 26, 26, 0.45),
-                    inset 0 0 25px rgba(255, 26, 26, 0.35);
-                border-color: #ff4d4d;
+                background-position: 0% 50%;
             }
+        }
+
+        .center-image {
+            max-width: 90%;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 <body>
 
-    <div class="neon-box">
-        <div class="icon-container">
-            <!-- آیکون برداری مسدود (SVG) با درخشش نئونی -->
-            <svg class="block-icon" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
-            </svg>
-        </div>
-        
-        <h1 class="message-text">
-            به دلیل نارضایتی تعدادی از اساتید و کارکنان دانشگاه فعالیت سایت متوقف شد!
-        </h1>
-    </div>
+    <img src="image/a.webp" alt="تصویر" class="center-image">
 
 </body>
 </html>
