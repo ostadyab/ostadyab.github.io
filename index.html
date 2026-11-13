@@ -18,7 +18,6 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            /* گرادینت بنفش تیره */
             background: linear-gradient(-45deg, #0d021f, #1f0640, #340b6b, #14032b);
             background-size: 400% 400%;
             animation: gradientBG 12s ease infinite;
@@ -37,13 +36,21 @@
         }
 
         .center-image {
-            max-width: 90%;
-            max-height: 90vh;
+            max-width: 220px;
+            max-height: 220px;
             width: auto;
             height: auto;
             display: block;
-            border-radius: 12px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            animation: blink 2s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.25;
+            }
         }
     </style>
 </head>
