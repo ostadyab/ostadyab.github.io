@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>استادیاب | جستجوی شماره تماس اساتید</title>
   
-  <!-- پیش‌بارگذاری آنی فونت‌ها برای حذف تاخیر تغییر فونت -->
   <link rel="preload" href="fonts/m-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="fonts/m-Bold.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="fonts/m-ExtraBold.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="fonts/ch.ttf" as="font" type="font/ttf" crossorigin>
 
-  <!-- پیش‌بارگذاری آنی تصاویر کلیدی -->
   <link rel="preload" as="image" href="images/logo.webp">
   <link rel="preload" as="image" href="images/marakez.webp">
   <link rel="preload" as="image" href="images/ertebat.webp">
@@ -311,7 +309,7 @@
       background: #ffffff;
       border: 2.5px solid transparent;
       border-radius: 36px;
-      padding: 0 66px 0 52px;
+      padding: 0 56px 0 52px;
       font-size: 17px;
       font-weight: 600;
       color: #2b004a;
@@ -333,14 +331,14 @@
       box-shadow: 0 8px 28px rgba(199, 125, 255, 0.5);
     }
 
+    /* ابعاد کوچک‌تر و شکیل‌تر برای استیکرهای داخل نوار سرچ */
     .search-sticker-box {
       position: absolute;
-      right: 12px;
+      right: 14px;
       top: 50%;
       transform: translateY(-50%);
-      width: 48px;
-      height: 48px;
-      max-height: calc(100% - 6px);
+      width: 36px;
+      height: 36px;
       pointer-events: none;
       display: flex;
       align-items: center;
@@ -360,7 +358,7 @@
       -webkit-backface-visibility: hidden;
       transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease;
       will-change: transform, opacity;
-      filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.18));
     }
 
     .sticker-cat.cat-1 {
@@ -370,12 +368,12 @@
 
     .sticker-cat.cat-2 {
       opacity: 0;
-      transform: scale(0.6) rotate(-20deg) translateY(12px);
+      transform: scale(0.6) rotate(-20deg) translateY(10px);
     }
 
     .search-wrapper.is-focused .sticker-cat.cat-1 {
       opacity: 0;
-      transform: scale(0.6) rotate(20deg) translateY(-12px);
+      transform: scale(0.6) rotate(20deg) translateY(-10px);
     }
 
     .search-wrapper.is-focused .sticker-cat.cat-2 {
@@ -645,7 +643,6 @@
       background: rgba(6, 214, 160, 0.08) !important;
     }
 
-    /* حذف ترنزیشن تاخیردار برای همگام‌سازی لحظه‌ای سبز شدن آیکون‌ها */
     .contact-glass-pill i {
       font-size: 19px;
       color: #e0aaff;
@@ -952,13 +949,13 @@
       .subtitle-glass-capsule { padding: 2.5px 11px; border-radius: 7px; margin-top: 8px; margin-bottom: 18px; }
       .hero-subtitle-text { font-size: 9px; }
       
-      .search-input-box { height: 50px; font-size: 15.5px; padding: 0 58px 0 44px; }
+      .search-input-box { height: 50px; font-size: 15.5px; padding: 0 48px 0 44px; }
       .search-input-box::placeholder { font-size: 14.5px; }
 
       .search-sticker-box {
-        right: 10px;
-        width: 42px;
-        height: 42px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
       }
 
       .clear-search-btn { width: 25px; height: 25px; font-size: 12px; left: 13px; }
@@ -1010,12 +1007,10 @@
       <img src="images/logo.webp" alt="استادیاب" class="hero-logo-img">
     </div>
 
-    <!-- باکس کپسولی با انیمیشن برق‌زدگی -->
     <div class="subtitle-glass-capsule">
       <span class="hero-subtitle-text">جستجوی شماره تماس اساتید دانشگاه پیام نور استان قزوین</span>
     </div>
 
-    <!-- نوار جستجو با استیکر گربه -->
     <div class="search-wrapper" id="searchWrapper">
       <input type="text" id="searchInput" class="search-input-box" placeholder="نام استاد مدنظر را تایپ کنید..." autocomplete="off">
       <div class="search-sticker-box">
@@ -1029,7 +1024,6 @@
 
     <div class="home-actions-wrapper" id="homeActionsWrapper">
       <div class="quick-actions-row">
-        <!-- باکس مراکز دانشگاهی -->
         <div class="ratio-10-7-card card-marakez" id="cardMarakez" onclick="window.location.href='marakez/'">
           <a href="marakez/" class="card-corner-btn btn-marakez home-card-btn" id="openCampusBtn">
             <span>مشاهده</span>
@@ -1041,7 +1035,6 @@
           </a>
         </div>
 
-        <!-- باکس ارتباط با کارشناسان رشته -->
         <div class="ratio-10-7-card card-ertebat" id="cardErtebat" onclick="window.location.href='karshenas/'">
           <a href="karshenas/" class="card-corner-btn btn-ertebat home-card-btn" id="openExpertsBtn">
             <span>مشاهده</span>
@@ -1054,7 +1047,6 @@
         </div>
       </div>
 
-      <!-- باکس پشتیبانان -->
       <div class="ratio-24-7-card card-poshtibanan" id="cardPoshtibanan" onclick="window.location.href='poshtiban/'">
         <a href="poshtiban/" class="card-corner-btn btn-poshtibanan home-card-btn" id="openSupportBtn">
           <span>مشاهده</span>
@@ -1066,7 +1058,6 @@
         </a>
       </div>
 
-      <!-- باکس عضویت در کانال ایتا -->
       <div class="ratio-24-7-card card-ozviat" id="cardOzviat" onclick="window.open('https://eitaa.com/joinchat/137627106Ccda4d2e78d', '_blank')">
         <a href="https://eitaa.com/joinchat/137627106Ccda4d2e78d" target="_blank" class="card-corner-btn aligned-action-btn btn-ozviat home-card-btn">
           <span>عضویت</span>
@@ -1078,7 +1069,6 @@
         </a>
       </div>
 
-      <!-- باکس مای پی‌ان‌یو -->
       <div class="ratio-24-7-card card-mypnu" id="cardMypnu" onclick="window.open('https://mypnu.github.io', '_blank')">
         <a href="https://mypnu.github.io" target="_blank" class="card-corner-btn aligned-action-btn btn-mypnu-solid home-card-btn" id="boxMyPnu">
           <span>ورود</span>
