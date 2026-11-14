@@ -248,40 +248,41 @@
       overflow: hidden;
     }
 
+    /* انیمیشن برق‌زدگی کپسول از راست به چپ */
     .subtitle-glass-capsule::after {
       content: '';
       position: absolute;
       top: -60%;
-      left: -80%;
+      right: -90%;
       width: 50%;
       height: 220%;
       background: linear-gradient(
-        115deg,
+        -115deg,
         rgba(255, 255, 255, 0) 0%,
         rgba(255, 255, 255, 0.08) 25%,
         rgba(255, 235, 179, 0.55) 50%,
         rgba(255, 255, 255, 0.08) 75%,
         rgba(255, 255, 255, 0) 100%
       );
-      transform: rotate(24deg);
+      transform: rotate(-24deg);
       pointer-events: none;
-      animation: capsuleShineGlow 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      animation: capsuleShineGlowRtl 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     }
 
-    @keyframes capsuleShineGlow {
+    @keyframes capsuleShineGlowRtl {
       0% {
-        left: -90%;
+        right: -90%;
         opacity: 0;
       }
       10% {
         opacity: 0.95;
       }
       38% {
-        left: 140%;
+        right: 140%;
         opacity: 0.95;
       }
       45%, 100% {
-        left: 140%;
+        right: 140%;
         opacity: 0;
       }
     }
@@ -331,7 +332,6 @@
       box-shadow: 0 8px 28px rgba(199, 125, 255, 0.5);
     }
 
-    /* ابعاد کوچک‌تر و شکیل‌تر برای استیکرهای داخل نوار سرچ */
     .search-sticker-box {
       position: absolute;
       right: 14px;
@@ -540,6 +540,7 @@
       filter: brightness(0.96);
     }
 
+    /* انیمیشن نرم و پویای فلش‌های سه‌گانه در گوشه کارت‌ها */
     .triple-arrow {
       display: inline-flex;
       align-items: center;
@@ -550,13 +551,29 @@
     .arrow-tick {
       display: inline-flex;
       font-size: 10px;
-      opacity: 0.75;
-      transition: transform 0.25s ease, opacity 0.25s ease;
+      animation: arrowWaveFlow 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     }
 
-    .card-corner-btn:hover .arrow-tick {
-      opacity: 1;
-      transform: translateX(-2px);
+    /* تاخیر پله‌ای از راست (نزدیک متن) به چپ برای حرکت موجی */
+    .triple-arrow .arrow-tick:nth-child(3) {
+      animation-delay: 0s;
+    }
+    .triple-arrow .arrow-tick:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    .triple-arrow .arrow-tick:nth-child(1) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes arrowWaveFlow {
+      0%, 100% {
+        opacity: 0.38;
+        transform: translateX(0px);
+      }
+      50% {
+        opacity: 1;
+        transform: translateX(-3px);
+      }
     }
 
     .btn-marakez { background: #e63956; color: #ffffff; }
