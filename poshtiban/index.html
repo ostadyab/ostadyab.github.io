@@ -24,35 +24,35 @@
       src: url('../fonts/m-Regular.ttf') format('truetype');
       font-weight: 400;
       font-style: normal;
-      font-display: swap;
+      font-display: block;
     }
     @font-face {
       font-family: 'AppFont';
       src: url('../fonts/m-SemiBold.ttf') format('truetype');
       font-weight: 600;
       font-style: normal;
-      font-display: swap;
+      font-display: block;
     }
     @font-face {
       font-family: 'AppFont';
       src: url('../fonts/m-Bold.ttf') format('truetype');
       font-weight: 700;
       font-style: normal;
-      font-display: swap;
+      font-display: block;
     }
     @font-face {
       font-family: 'AppFont';
       src: url('../fonts/m-ExtraBold.ttf') format('truetype');
       font-weight: 800;
       font-style: normal;
-      font-display: swap;
+      font-display: block;
     }
     @font-face {
       font-family: 'AppFont';
       src: url('../fonts/m-Black.ttf') format('truetype');
       font-weight: 900;
       font-style: normal;
-      font-display: swap;
+      font-display: block;
     }
 
     :root {
@@ -537,7 +537,7 @@
       <a href="https://eitaa.com/arm00n" target="_blank" class="nav-btn eitaa">
         <img src="../images/eitaa-white.webp" class="custom-nav-icon" alt="ایتا"> ایتا
       </a>
-      <a href="https://t.me/iamarmoon" target="_blank" class="nav-btn telegram">
+      <a href="https://t.me/iarmoon" target="_blank" class="nav-btn telegram">
         <img src="../images/tel.webp" class="custom-nav-icon" alt="تلگرام"> تلگرام
       </a>
     </div>
@@ -634,7 +634,6 @@
             </div>
           </div>
 
-          <!-- ردیف جدید اضافه شده برای خانم لطفی -->
           <div class="support-person-row">
             <span class="support-person-name">خانم لطفی</span>
             <span class="support-person-role">«آموزش»</span>
@@ -920,7 +919,7 @@
               <span class="contact-digits">۰۲۸۳۵۲۳۹۰۶۱</span>
             </div>
             <div class="card-actions">
-              <a href="tel:02835239061" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
+              <a href="tel:02833379061" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('02835239061', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -949,7 +948,7 @@
               <span class="contact-digits">۰۲۸۳۵۲۳۹۰۶۱</span>
             </div>
             <div class="card-actions">
-              <a href="tel:02835239061" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
+              <a href="tel:02833379061" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('02835239061', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -1085,7 +1084,6 @@
     function handleCopyAction(text, btnElement) {
       navigator.clipboard.writeText(text).then(() => {
         const cardParent = btnElement.closest('.support-person-row');
-        // پیدا کردن دقیق پیل متعلق به همین ردیف دکمه، نه اولین پیل کل کارت
         const actionContainer = btnElement.closest('.card-actions');
         const pillElement = actionContainer ? actionContainer.previousElementSibling : null;
         
