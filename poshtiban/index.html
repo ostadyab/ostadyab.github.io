@@ -71,7 +71,6 @@
       font-family: 'AppFont', sans-serif;
       user-select: none;
       -webkit-tap-highlight-color: transparent;
-      touch-action: pan-x pan-y;
     }
 
     body {
@@ -739,7 +738,7 @@
             <div class="card-actions">
               <a href="tel:09123817549" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('09123817549', this)"><span>کپی</span></button>
-              <a href="sms:09123817549" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
+              <a href="sms:09123817549" onclick="handleSmsAction(event, '09123817549', this)" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
             </div>
           </div>
 
@@ -860,7 +859,7 @@
             <div class="card-actions">
               <a href="tel:09191851670" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('09191851670', this)"><span>کپی</span></button>
-              <a href="sms:09191851670" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
+              <a href="sms:09191851670" onclick="handleSmsAction(event, '09191851670', this)" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
             </div>
             <div class="contact-glass-pill">
               <i class="fa-solid fa-phone-flip"></i>
@@ -912,14 +911,14 @@
             <div class="card-actions">
               <a href="tel:09350714114" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('09350714114', this)"><span>کپی</span></button>
-              <a href="sms:09350714114" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
+              <a href="sms:09350714114" onclick="handleSmsAction(event, '09350714114', this)" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
             </div>
             <div class="contact-glass-pill">
               <i class="fa-solid fa-phone-flip"></i>
               <span class="contact-digits">۰۲۸۳۵۲۳۹۰۶۱</span>
             </div>
             <div class="card-actions">
-              <a href="tel:02833379061" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
+              <a href="tel:02835239061" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('02835239061', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -941,14 +940,14 @@
             <div class="card-actions">
               <a href="tel:09195996419" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('09195996419', this)"><span>کپی</span></button>
-              <a href="sms:09195996419" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
+              <a href="sms:09195996419" onclick="handleSmsAction(event, '09195996419', this)" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
             </div>
             <div class="contact-glass-pill">
               <i class="fa-solid fa-phone-flip"></i>
               <span class="contact-digits">۰۲۸۳۵۲۳۹۰۶۱</span>
             </div>
             <div class="card-actions">
-              <a href="tel:02833379061" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
+              <a href="tel:02835239061" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('02835239061', this)"><span>کپی</span></button>
             </div>
           </div>
@@ -973,7 +972,7 @@
             <div class="card-actions">
               <a href="tel:09192886035" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('09192886035', this)"><span>کپی</span></button>
-              <a href="sms:09192886035" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
+              <a href="sms:09192886035" onclick="handleSmsAction(event, '09192886035', this)" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
             </div>
           </div>
         </div>
@@ -997,7 +996,7 @@
             <div class="card-actions">
               <a href="tel:09222823978" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('09222823978', this)"><span>کپی</span></button>
-              <a href="sms:09222823978" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
+              <a href="sms:09222823978" onclick="handleSmsAction(event, '09222823978', this)" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
             </div>
             <div class="contact-glass-pill">
               <i class="fa-solid fa-phone-flip"></i>
@@ -1018,7 +1017,7 @@
             <div class="card-actions">
               <a href="tel:09123820125" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('09123820125', this)"><span>کپی</span></button>
-              <a href="sms:09123820125" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
+              <a href="sms:09123820125" onclick="handleSmsAction(event, '09123820125', this)" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
             </div>
             <div class="contact-glass-pill">
               <i class="fa-solid fa-phone-flip"></i>
@@ -1039,7 +1038,7 @@
             <div class="card-actions">
               <a href="tel:09191905572" class="action-btn btn-call"><i class="fa-solid fa-phone"></i> تماس</a>
               <button class="action-btn btn-copy" onclick="handleCopyAction('09191905572', this)"><span>کپی</span></button>
-              <a href="sms:09191905572" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
+              <a href="sms:09191905572" onclick="handleSmsAction(event, '09191905572', this)" class="action-btn btn-sms"><i class="fa-solid fa-comment-sms"></i> پیامک</a>
             </div>
             <div class="contact-glass-pill">
               <i class="fa-solid fa-phone-flip"></i>
@@ -1080,6 +1079,36 @@
         }
       });
     });
+
+    function handleSmsAction(e, phoneNumber, btnElement) {
+      const cleanPhone = phoneNumber.replace(/\s+/g, '');
+      const ua = navigator.userAgent || '';
+      const isInAppBrowser = /Eitaa|Telegram|Rubika|Bale|Instagram|wv/i.test(ua);
+
+      if (isInAppBrowser) {
+        e.preventDefault();
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(cleanPhone);
+        }
+
+        const originalHtml = btnElement.innerHTML;
+        const originalBg = btnElement.style.background;
+        
+        btnElement.style.background = 'linear-gradient(135deg, #059669, #10b981)';
+        btnElement.style.color = '#ffffff';
+        btnElement.innerHTML = '<i class="fa-solid fa-check" style="color:#fff !important"></i> شماره کپی شد';
+
+        if (/Android/i.test(ua)) {
+          window.location.href = `intent:${cleanPhone}#Intent;scheme=smsto;package=com.google.android.apps.messaging;end`;
+        }
+
+        setTimeout(() => {
+          btnElement.innerHTML = originalHtml;
+          btnElement.style.background = originalBg;
+          btnElement.style.color = '';
+        }, 2500);
+      }
+    }
 
     function handleCopyAction(text, btnElement) {
       navigator.clipboard.writeText(text).then(() => {
