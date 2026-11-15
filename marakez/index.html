@@ -24,35 +24,35 @@
       src: url('../fonts/m-Regular.ttf') format('truetype');
       font-weight: 400;
       font-style: normal;
-      font-display: swap;
+      font-display: block;
     }
     @font-face {
       font-family: 'AppFont';
       src: url('../fonts/m-SemiBold.ttf') format('truetype');
       font-weight: 600;
       font-style: normal;
-      font-display: swap;
+      font-display: block;
     }
     @font-face {
       font-family: 'AppFont';
       src: url('../fonts/m-Bold.ttf') format('truetype');
       font-weight: 700;
       font-style: normal;
-      font-display: swap;
+      font-display: block;
     }
     @font-face {
       font-family: 'AppFont';
       src: url('../fonts/m-ExtraBold.ttf') format('truetype');
       font-weight: 800;
       font-style: normal;
-      font-display: swap;
+      font-display: block;
     }
     @font-face {
       font-family: 'AppFont';
       src: url('../fonts/m-Black.ttf') format('truetype');
       font-weight: 900;
       font-style: normal;
-      font-display: swap;
+      font-display: block;
     }
 
     :root {
@@ -168,7 +168,6 @@
       margin-bottom: 16px;
     }
 
-    /* دکمه بازگشت با رنگ مشابه دکمه مشاهده صفحه اصلی، غیرشیشه‌ای، با متن و آیکون سفید */
     .back-home-btn {
       display: inline-flex;
       align-items: center;
@@ -378,11 +377,11 @@
     .contact-glass-pill i {
       font-size: 18px;
       color: #e0aaff;
-      transition: color 0.3s ease;
     }
 
     .contact-glass-pill.glow-pill-green i {
       color: #06d6a0 !important;
+      transition: none !important;
     }
 
     .contact-digits {
@@ -392,12 +391,12 @@
       color: #00f0ff;
       line-height: 1;
       text-shadow: 0 0 6px rgba(0, 240, 255, 0.35);
-      transition: color 0.3s ease, text-shadow 0.3s ease;
     }
 
     .contact-digits.copied-glow {
       color: #06d6a0 !important;
       text-shadow: 0 0 10px rgba(6, 214, 160, 0.8) !important;
+      transition: none !important;
     }
 
     .card-actions {
@@ -509,7 +508,7 @@
       <a href="https://eitaa.com/arm00n" target="_blank" class="nav-btn eitaa">
         <img src="../images/eitaa-white.webp" class="custom-nav-icon" alt="ایتا"> ایتا
       </a>
-      <a href="https://t.me/iamarmoon" target="_blank" class="nav-btn telegram">
+      <a href="https://t.me/iarmoon" target="_blank" class="nav-btn telegram">
         <img src="../images/tel.webp" class="custom-nav-icon" alt="تلگرام"> تلگرام
       </a>
     </div>
@@ -523,7 +522,6 @@
       </a>
     </div>
 
-    <!-- اسلایدر دو تایی هدر بدون زوم -->
     <div class="page-hero-banner-slider" id="bannerSlider">
       <div class="slide-item active" style="background-image: url('../images/marh1.webp');"></div>
       <div class="slide-item" style="background-image: url('../images/marh2.webp');"></div>
